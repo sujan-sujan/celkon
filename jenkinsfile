@@ -11,7 +11,7 @@ pipeline{
           sshagent(['deploy']) {
             sh "chmod 777 /home/test/.jenkins -R"
             sh "cp -rp /home/test/.jenkins/workspace/pipeline/target/*.jar /home/test/out"
-            sh "scp -rp /home/test/out/*.jar test@54.67.106.24:/home/test/test"
+            sh "scp -rp /home/test/out/*.jar test@54.183.230.130:/home/test/test"
           }
         }
     }
